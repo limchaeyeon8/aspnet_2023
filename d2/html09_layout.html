@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>상대위치 / 절대위치</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script> -->
+
+    <style>
+        #containor {
+            width: 500px; height: 300px;
+            border:  solid 2px darkslategrey;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .circle {
+            position: absolute;
+            width: 100px; height: 100px;
+            border:  solid 1 px darksalmon;
+            border-radius: 50%;
+            margin: 10px;           
+        }
+
+        #deep_red {
+            left: 20px; top: 20px;
+            background-color: darkred;
+        }
+
+        #moss_green {
+            right: 20px; top: 20px;
+            background-color: cadetblue;
+        }
+
+        #pale_blue {
+            left: 20px; bottom: 20px;
+            background-color: lightsteelblue;
+        }
+
+        #lime_yellow {
+            right: 20px; bottom: 20px;
+            background-color: lemonchiffon;
+        }
+
+        .top_bar {
+            position: fixed;
+            left: 0; top: 0; right: 0;
+            background-color: paleturquoise;
+            height: 40px;
+        }
+
+        .left_bar {
+            position: fixed;
+            left: 0; top: 0; bottom: 0;
+            background-color: honeydew;
+            width: 40px;
+            z-index: 10;    /* 모니터화면을 z축으로 여러 레이어를 겹칠 때 */
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="top_bar"></div>
+    <div class="left_bar"></div>
+
+    <h1>Dummy Title</h1>
+    <div id="containor">
+        <div id="deep_red" class="circle"></div>
+        <div id="moss_green" class="circle"></div>
+        <div id="pale_blue" class="circle"></div>
+        <div id="lime_yellow" class="circle"></div>
+    </div>
+
+    <h1>Dummy Title</h1>
+
+</body>
+</html>
