@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Layout</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script> -->
+
+    <style>
+        #header {
+            width: 600px;
+            margin: 0 auto;
+            color: bisque;
+            background-color: darkslategrey;
+        }
+
+        #wrap {
+            width: 600px;
+            margin: 0 auto;
+            color: azure;
+            background-color: darkgrey;
+            overflow:hidden;
+        }
+
+        #aside {
+            width: 150px;
+            margin: 0 auto;
+            float: right;
+            color: lightskyblue;
+            background-color: ivory;
+        }
+
+        #content {
+            width: 450px;
+            float: left;
+            margin: 0 auto;
+            color: honeydew;
+            background-color: plum;
+        }
+
+        #footer {
+            width: 600px;
+            margin: 0 auto;
+            color: mediumaquamarine;
+            background-color: lavenderblush;
+        }
+
+        .item {
+            color: darkseagreen;
+        }
+
+        .options {
+            background-color: lightcyan;
+        }
+        
+        /*후손선택자 --  '>' 안 씀 */
+        #header h1 {
+            font-size: smaller;
+        }
+
+        /*자손선택자*/
+        #wrap > #aside > h2 {
+            color: darkorange;
+        }
+
+        /*요소에 마우스를 올렸을 때 처리될 디자인*/
+        h1:hover {
+            color:aliceblue;
+        }
+
+        input:focus {
+            width: 100px;      /* px / % / em: 배수 / rem: 상대적 배수 */
+            border: solid 3px #cfcdff;
+            background-color: rgb(242, 239, 214);
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div id="header">
+        <h1>#header 영역</h1>
+    </div>
+
+    <div id="wrap">
+        <div id="aside">
+            <h2>#aside 영역</h2>
+        </div>
+
+        <div id="content">
+            <h2>#content 영역</h2>
+        </div>
+    </div>
+
+    <div id="footer">
+        <h2 class="item options">#footer 영역</h2>
+    </div>
+
+    <form>
+        <input type="text">
+    </form>
+</body>
+</html>
