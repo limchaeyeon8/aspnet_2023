@@ -7,20 +7,24 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script> -->
-
     <script>
         window.onload = function () {
-         var image = document.getElementById('image');
-        //  image.src = 'https://placehold.co/540x300';
-        image.src = 'https://picsum.photos/540/300';
-        image.width = 600;
-        image.height = 300;
-        // img 객체 접근 / js에서 src값과 속성을 변경
-        } 
-     </script>
+            var button = document.querySelector("input");
+            button.onclick = function () {
+                alert('click!!');
+            }
+
+            alert(event);
+        }
+    </script>
+
+    <style>
+        
+    </style>
 
 </head>
 <body>
-    <img id="image">
+    <!-- <input type="button" value="클릭" onclick="alert('click!!');"> -->
+    <input type="button" value="클릭">
 </body>
 </html>
