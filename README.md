@@ -25,5 +25,5 @@ ASP.NET 학습 리포지토리
 
 ▼ Bootstrap 앨범사이트 클로닝
 
-<img src="" width="700">
+<img src="https://raw.githubusercontent.com/limchaeyeon8/aspnet_2023/main/d4/album.gif" width="700">
 
