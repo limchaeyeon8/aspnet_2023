@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace aspnet02_boardapp.Models
 {
@@ -25,5 +26,9 @@ namespace aspnet02_boardapp.Models
         public DateTime PostDate { get; set; }
         [DisplayName("게시글")]
         public string Contents { get; set; }
+
+        [NotMapped]
+        [DisplayName("번호")]
+        public string rowNum{ get; set; }
     }
 }

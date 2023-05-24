@@ -25,6 +25,18 @@ namespace aspnet02_boardapp
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
+            // 비밀번호 정책 변경 설정
+            builder.Services.Configure<IdentityOptions>(options =>
+            {
+                // Custom Password policy   // 실무에서는 아래와 같이 변경하면 안 됨
+                options.Password.RequireDigit = false;              // 영문자 필요여부
+                options.Password.RequireLowercase = false;          // 소문자 필요여부
+                options.Password.RequireUppercase = false;          // 대문자 필요여부
+                options.Password.RequireNonAlphanumeric = false;    // 특수문자 필요여부
+                options.Password.RequiredLength = 4;                // 최소 패스워드 길이 수
+                options.Password.RequiredUniqueChars = 0;           // 암호 고유문자 갯수
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

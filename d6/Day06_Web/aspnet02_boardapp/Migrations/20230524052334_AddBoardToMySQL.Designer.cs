@@ -11,8 +11,8 @@ using aspnet02_boardapp.Data;
 namespace aspnet02_boardapp.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230524012524_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20230524052334_AddBoardToMySQL")]
+    partial class AddBoardToMySQL
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

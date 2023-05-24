@@ -1,7 +1,7 @@
 ﻿@model aspnet02_boardapp.Models.Board
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "상세페이지";
 }
 
 <div class="container" p-3>
@@ -57,10 +57,17 @@
     </dl>
 </div>
 <div class="text-end">
-    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-sm btn-primary">
+    @if (signInManager.IsSignedIn(User) && Model.UserName == User.Identity.Name)
+    {
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-sm btn-primary">
         <i class="bi bi-pencil"></i>&nbsp;수정
-    </a>&nbsp;
+    </a>
+    }    
+    &nbsp;
     <a asp-controller="Board" asp-action="Index" class="btn btn-sm btn-success">
         <i class="bi bi-list-ol"></i>&nbsp;목록
+
+    
     </a>
+
 </div>

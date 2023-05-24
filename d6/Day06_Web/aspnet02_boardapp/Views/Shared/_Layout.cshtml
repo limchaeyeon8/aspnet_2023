@@ -1,11 +1,15 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - aspnet02_boardapp</title>
+    <title>@ViewData["Title"] - 게시판 테스트</title>
+
+    <link rel="icon" href="/icecream.ico" />
+
     <!-- Bootstrap 5 CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
           rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <!-- Bootswatch.com에서 다운로드 받은 Flaty 테마 -->
     <link rel="stylesheet" href="~/css/bootstrap.min.css" />
@@ -20,7 +24,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-black border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">aspnet02_boardapp</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">IoT 웹앱</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -35,6 +39,46 @@
                         </li>
                     </ul>
                 </div>
+                @if (signInManager.IsSignedIn(User))
+                {
+
+                    @*
+                <ul class="navbar-nav">
+                <li class="nav-item text-light py-2">
+                @UserManager.GetUserName(User)님 반갑습니다!
+                </li>
+                <li>
+                <button type="submit" class="btn btn-link navbar-btn">로그아웃</button>
+                </li>
+                </ul>
+                *@
+                    @*<>@UserManager.GetUserName(User)</>*@
+                    <div class="dropstart">
+                        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                        </a>
+                        <form asp-controller="Account" asp-action="Logout" method="post" id="logoutForm">
+                            <ul class="dropdown-menu text-small shadow">
+                                <li>@userManager.GetUserName(User)</li>
+                                <li><a class="dropdown-item" href="#">환경설정</a></li>
+                                <li><a class="dropdown-item" href="#">프로필</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><button class="dropdown-item" type="submit">로그아웃</button></li>
+                            </ul>
+                        </form>
+                    </div>
+                }
+                else
+                {
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                        </li>
+                    </ul>
+                }
             </div>
         </nav>
     </header>
@@ -56,9 +100,9 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
             crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>   
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
-    <!-- WYSWYG 에디터용 js & 한국어언어팩 js -->    
+    <!-- WYSWYG 에디터용 js & 한국어언어팩 js -->
     <script src="~/lib/trumbowyg/trumbowyg.min.js"></script>
     <script src="~/lib/trumbowyg/langs/ko.min.js"></script>
     <!-- trumbowyg를 site.js에서 부르기 때문에 상위에 trumbowyg에 관련된 js가 먼저 나와야.. -->
