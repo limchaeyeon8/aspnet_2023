@@ -1,4 +1,4 @@
-namespace BookRentalShopApi
+namespace BookRentalshopApi
 {
     public class WeatherForecast
     {

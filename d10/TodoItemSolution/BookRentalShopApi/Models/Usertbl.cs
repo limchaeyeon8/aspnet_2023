@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BookRentalShopApi.Models;
+namespace BookRentalshopApi.Models;
 
 public partial class Usertbl
 {
@@ -9,5 +9,5 @@ public partial class Usertbl
 
     public string UserId { get; set; } = null!;
 
-    public string Pswd { get; set; } = null!;
+    public string Password { get; set; } = null!;
 }

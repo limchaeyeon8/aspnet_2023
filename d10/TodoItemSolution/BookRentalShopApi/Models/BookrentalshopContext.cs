@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace BookRentalShopApi.Models;
+namespace BookRentalshopApi.Models;
 
 public partial class BookrentalshopContext : DbContext
 {
@@ -123,9 +123,9 @@ public partial class BookrentalshopContext : DbContext
             entity.HasIndex(e => e.UserId, "userId_UNIQUE").IsUnique();
 
             entity.Property(e => e.Id).HasColumnName("id");
-            entity.Property(e => e.Pswd)
+            entity.Property(e => e.Password)
                 .HasMaxLength(255)
-                .HasColumnName("pswd");
+                .HasColumnName("password");
             entity.Property(e => e.UserId)
                 .HasMaxLength(12)
                 .HasColumnName("userId");

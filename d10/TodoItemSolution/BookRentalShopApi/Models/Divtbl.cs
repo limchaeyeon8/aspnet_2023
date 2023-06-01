@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BookRentalShopApi.Models;
+namespace BookRentalshopApi.Models;
 
 public partial class Divtbl
 {
