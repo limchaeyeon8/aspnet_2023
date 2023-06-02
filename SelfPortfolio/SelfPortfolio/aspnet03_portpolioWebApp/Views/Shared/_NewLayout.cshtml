@@ -2,116 +2,77 @@
 <html lang="ko">
 
 <head>
-    <!--html은 대소문자 구분 안 하지만 대문자사용은 자제하기 -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    @*<meta name="description" content="">
-    <meta name="author" content="">*@
-    @*<link rel="preconnect" href="https://fonts.gstatic.com">*@
+    <title>ICY Portfolio</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
 
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@500&display=swap" rel="stylesheet">
+    <!-- Favicons -->
+    <link href="~/themes/Template/assets/img/favicon.png" rel="icon">
+    <link href="~/themes/Template/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <title>@ViewData["Title"]</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    <!-- Bootstrap 5 CDN -->
-    <link rel="stylesheet" href="~/themes/seo_dream/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Vendor CSS Files -->
+    <link href="~/themes/Template/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/themes/Template/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/themes/Template/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/themes/Template/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/themes/Template/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="~/themes/Template/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+    <!-- Template Main CSS File -->
+    <link href="~/themes/Template/assets/css/style.css" rel="stylesheet">
 
-    <!-- 경로 변경 시 기존경로 복사 해놓고 ~/themes/seo_dream/ 뒤 붙여넣기 -->
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="~/themes/seo_dream/assets/css/fontawesome.css">
-    <link rel="stylesheet" href="~/themes/seo_dream/assets/css/templatemo-seo-dream.css">
-    <link rel="stylesheet" href="~/themes/seo_dream/assets/css/animated.css">
-    <link rel="stylesheet" href="~/themes/seo_dream/assets/css/owl.css">
-
-    <!-- 우리 사이트용 추가 CSS -->
-    <!-- WYSWYG 에디터 링크 -->
-    <link rel="stylesheet" href="~/lib/trumbowyg/ui/trumbowyg.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <!-- Toast 메시지창 js 라이브러리용 CSS -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+    <!-- =======================================================
+    * Template Name: Personal
+    * Updated: May 30 2023 with Bootstrap v5.3.0
+    * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
 </head>
+
 <body>
-    <!-- ***** Preloader Start ***** -->
-    <div id="js-preloader" class="js-preloader">
-        <div class="preloader-inner">
-            <span class="dot"></span>
-            <div class="dots">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </div>
-    <!-- ***** Preloader End ***** -->
-    <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+
+    <!-- ======= Header ======= -->
+    <header id="header">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
-                        <a asp-action="Index" asp-controller="Home" class="logo">
-                            <h4>IoT Portfolio <img src="~/themes/seo_dream/assets/images/logo-icon.png" alt=""></h4>
-                        </a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
-                            @if (ViewData["tag"] != "BOARD")
-                            {
-                                <li class="scroll-to-section"><a asp-controller="Home" asp-action="Index" class="active nanum-bold">홈</a></li>
-                                <li class="scroll-to-section"><a href="#features" class="active nanum-bold">스킬</a></li>
-                                <li class="scroll-to-section"><a href="#about" class="active nanum-bold">소개</a></li>
-                                <li class="scroll-to-section"><a href="#portfolio" class="active nanum-bold">포트폴리오</a></li>
-                                <li class="scroll-to-section"><a href="#contact" class="active nanum-bold">문의</a></li>
-                                <li class="scroll-to-section"><a asp-action="Index" asp-controller="Board" class="active nanum-bold">공지사항</a></li>
-                                @*<li class="scroll-to-section"><div class="main-blue-button"><a href="#contact">Get Your Quote</a></div></li>*@
-                            }
 
-                            @if (signInManager.IsSignedIn(User))
-                            {
-                                @if (User.IsInRole("Admin"))
-                                {
-                                    <li class="scroll-to-section">
-                                        <a asp-controller="Admin" asp-action="ListRoles">권한관리</a>
-                                    </li>
-                                    <li class="scroll-to-section">
-                                        <a asp-action="Profile" asp-controller="Account"
-                                   asp-route-userName="@userManager.GetUserName(User)">프로필</a>
-                                    </li>
-                                }
-                                <li class="scroll-to-section">
-                                    <form asp-controller="Account" asp-action="Logout" method="post">
-                                        <button type="submit" class="btn btn=link nanum-bold nanum-bold">@userManager.GetUserName(User)</button>
-                                    </form>
-                                </li>
-                            }
-                            else
-                            {
-                                <li class="scroll-to-section">
-                                    <a asp-action="Register" asp-controller="Account">회원가입</a>
-                                </li>
-                                <li class="scroll-to-section">
-                                    <a asp-action="Login" asp-controller="Account">로그인</a>
-                                </li>
-                            }
+            <h1><a href="index.html">Chaeyeon Lim</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="mr-auto"><img src="~/themes/Template/assets/img/logo.png" alt="" class="img-fluid"></a> -->
+            <h2>I'm a ∀ <span>developer</span> from Busan</h2>
 
-                        </ul>
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link active" href="#header">Home</a></li>
+                    <li><a class="nav-link" href="#about">About</a></li>
+                    <li><a class="nav-link" href="#resume">Resume</a></li>
+                    @*<li><a class="nav-link" href="#services">Services</a></li>*@
+                    <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li><a class="nav-link" href="#contact">Contact</a></li>
+                    <li><a class="nav-link" href="#notice">Notice</a></li>
+                    <li><a class="nav-link" href="#notice">Register</a></li>
+                    <li><a class="nav-link" href="#notice">Login</a></li>
+                </ul>
 
-                        <!-- ***** Menu End ***** -->
-                    </nav>
-                </div>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+            <div class="social-links">
+                <a href="https://github.com/limchaeyeon8" class="github"><i class="bi bi-github"></i></a>
+                <a href="https://youtu.be/RxXV6NPIKq0" class="youtube"><i class="bi bi-youtube"></i></a>
+                <a href="https://www.instagram.com/chaeyeon_lim_01/" class="instagram"><i class="bi bi-instagram"></i></a>
+                @*<a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>*@
             </div>
+
         </div>
-    </header>
-    <!-- ***** Header Area End ***** -->
+    </header><!-- End Header -->
+
     <div>
         <!-- RenderBody() /Views/Account, Admin, Board, Home 전부 다 -->
         <!-- RenderBody() 필수 -->
@@ -136,14 +97,14 @@
 
     <!-- Scripts -->
     <!-- jQuery & Bootstrap CND LINKs -->
-    <script src="~/themes/seo_dream/vendor/jquery/jquery.min.js"></script>
-    <script src="~/themes/seo_dream/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/themes/Template/vendor/jquery/jquery.min.js"></script>
+    <script src="~/themes/Template/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- SEO Dream 테마를 위해서 개발자가 만든 js -->
-    <script src="~/themes/seo_dream/assets/js/owl-carousel.js"></script>
-    <script src="~/themes/seo_dream/assets/js/animation.js"></script>
-    <script src="~/themes/seo_dream/assets/js/imagesloaded.js"></script>
-    <script src="~/themes/seo_dream/assets/js/custom.js"></script>
+    <script src="~/themes/Template/assets/js/owl-carousel.js"></script>
+    <script src="~/themes/Template/assets/js/animation.js"></script>
+    <script src="~/themes/Template/assets/js/imagesloaded.js"></script>
+    <script src="~/themes/Template/assets/js/custom.js"></script>
 
     <!-- WYSWYG 에디터용 js & 한국어언어팩 js -->
     <script src="~/lib/trumbowyg/trumbowyg.min.js"></script>
