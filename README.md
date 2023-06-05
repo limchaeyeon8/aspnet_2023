@@ -65,7 +65,7 @@ ASP.NET Core MVC 게시판
 - ASP.NET Core MVC
     - 부트스트랩 테마(SEO Dream) 적용
 
-<img src="https://raw.githubusercontent.com/hugoMGSung/pknu_aspnet_2023/main/images/aspnetd8.gif" width="700">
+<img src="https://github.com/limchaeyeon8/aspnet_2023/blob/main/d8/Day08_Web/aspnetd8.gif" width="700">
 
 
 ## 9일차
