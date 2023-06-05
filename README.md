@@ -100,7 +100,7 @@ ASP.NET Core MVC 게시판
     - RestAPI Server 체크
     - FrontEnd Server 작업
 
-<img src="https://github.com/limchaeyeon8/aspnet_2023/blob/main/SelfPortfolio/sp_wip.gif" width="900">
+<img src="https://github.com/limchaeyeon8/aspnet_2023/blob/main/SelfPortfolio/SelfPortfolio/sp_wip.gif" width="900">
 
 ## 12일차
 - ASP.NET RestAPI
