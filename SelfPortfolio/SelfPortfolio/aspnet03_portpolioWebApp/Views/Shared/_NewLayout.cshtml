@@ -9,6 +9,8 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
 
+    <bgsound src="PederElias_PaperPlane.mp3" loop="Infinite"></bgsound>
+
     <!-- Favicons -->
     <link href="~/themes/Template/assets/img/favicon.png" rel="icon">
     <link href="~/themes/Template/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -55,13 +57,44 @@
                     @*<li><a class="nav-link" href="#services">Services</a></li>*@
                     <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
                     <li><a class="nav-link" href="#contact">Contact</a></li>
-                    <li><a class="nav-link" href="#notice">Notice</a></li>
-                    <li><a class="nav-link" href="#register">Register</a></li>
-                    <li><a class="nav-link" href="#login">Login</a></li>
-                </ul>
 
+
+                
+                 @if (signInManager.IsSignedIn(User))
+                    {
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a asp-controller="Board" asp-action="Index">Guest Book</a>
+                            </li>
+                            <li class="nav-item">
+                                <a asp-controller="Admin" asp-action="ListRoles">Admin</a>
+                            </li>
+                            
+                        }
+                        <li class="nav-item">
+                            <a asp-controller="Account" asp-action="Profile"
+                               asp-route-userName="@userManager.GetUserName(User)">Profile</a>
+                        </li>
+                        <li class="scroll-to-section">
+                            <form asp-controller="Account" asp-action="Logout" method="post">
+                                <button type="submit" class="btn btn-link text-decoration-underline" style="font-size:15px; font-weight:bold; background-color:transparent; border-color:transparent; color:white; padding: 19px;" >@userManager.GetUserName(User)</button>
+                            </form>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a asp-controller="Account" asp-action="Register">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-controller="Account" asp-action="Login">Login</a>
+                        </li>
+                    }
                 <i class="bi bi-list mobile-nav-toggle"></i>
+                </ul>
             </nav><!-- .navbar -->
+
 
             <div class="social-links">
                 <a href="https://github.com/limchaeyeon8" class="github"><i class="bi bi-github"></i></a>

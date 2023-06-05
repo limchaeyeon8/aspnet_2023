@@ -65,7 +65,7 @@ ASP.NET Core MVC 게시판
 - ASP.NET Core MVC
     - 부트스트랩 테마(SEO Dream) 적용
 
-<img src="https://raw.githubusercontent.com/hugoMGSung/pknu_aspnet_2023/main/images/aspnet06.gif" width="700">
+<img src="https://raw.githubusercontent.com/hugoMGSung/pknu_aspnet_2023/main/images/aspnetd8.gif" width="700">
 
 
 ## 9일차
@@ -75,9 +75,32 @@ ASP.NET Core MVC 게시판
     - RestAPI Server
     -WPF Client
 
+<img src="https://raw.githubusercontent.com/hugoMGSung/pknu_aspnet_2023/main/images/aspnet.gif" width="700">
+
+
 ## 10일차
 - ASP.NET RestAPI
     - RestAPI Server
     -WPF Client
 - 개인 포트폴리오
     - 부트스트랩 테마 적용
+
+
+## 11일차
+- ASP.NET RestAPI
+    - RestAPI Server 체크
+    - FrontEnd Server 작업
+
+
+## 12일차
+- ASP.NET RestAPI
+    - RestAPI Server 수정
+    - FrontEnd Server 작업계속
+RestAPI사용 FrontEnd Web
+
+
+## 13일차
+- ASP.NET RestAPI
+    - WPF 앱 연동
+    - RestAPI사용 WPF App 및 Web화면
+
