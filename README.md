@@ -65,25 +65,34 @@ ASP.NET Core MVC 게시판
 - ASP.NET Core MVC
     - 부트스트랩 테마(SEO Dream) 적용
 
-<img src="https://github.com/limchaeyeon8/aspnet_2023/blob/main/d8/Day08_Web/aspnetd8.gif" width="700">
+<img src="https://raw.githubusercontent.com/hugoMGSung/pknu_aspnet_2023/main/images/aspnet06.gif" width="700">
 
 
 ## 9일차
 - ASP.NET Core MVC
     - SEO Dream 테마 완료
+        - 스크롤이 되는 화면, 안되는 화면 메뉴 분리
+        - 포트폴리오 동적관리(이미지 업로드)
+        - IIS .net6.0 런타임 설치
 - ASP.NET RestAPI
     - RestAPI Server
-    -WPF Client
+    - WPF Client
 
-<img src="https://raw.githubusercontent.com/hugoMGSung/pknu_aspnet_2023/main/images/aspnet.gif" width="700">
+<img src="https://github.com/limchaeyeon8/aspnet_2023/blob/main/d8/Day08_Web/aspnetd8.gif" width="700">
 
 
 ## 10일차
 - ASP.NET RestAPI
     - RestAPI Server
-    -WPF Client
+
+<img src="https://github.com/limchaeyeon8/aspnet_2023/blob/main/d8/Day08_Web/swagger.png" width="700">
+
 - 개인 포트폴리오
-    - 부트스트랩 테마 적용
+    - 부트스트랩 테마 적용 (출처> https://bootstrapmade.com/demo/Personal/)
+
+<img src="https://github.com/limchaeyeon8/aspnet_2023/blob/main/SelfPortfolio/sp0.png" width="700">
+
+<img src="https://github.com/limchaeyeon8/aspnet_2023/blob/main/SelfPortfolio/sp1.png" width="700">
 
 
 ## 11일차
@@ -91,16 +100,22 @@ ASP.NET Core MVC 게시판
     - RestAPI Server 체크
     - FrontEnd Server 작업
 
+<img src="https://github.com/limchaeyeon8/aspnet_2023/blob/main/SelfPortfolio/sp_wip.gif" width="900">
 
 ## 12일차
 - ASP.NET RestAPI
     - RestAPI Server 수정
     - FrontEnd Server 작업계속
+
 RestAPI사용 FrontEnd Web
 
+<img src="https://raw.githubusercontent.com/hugoMGSung/pknu_aspnet_2023/main/images/restapi02.gif" width="700">
 
 ## 13일차
 - ASP.NET RestAPI
     - WPF 앱 연동
     - RestAPI사용 WPF App 및 Web화면
 
+RestAPI사용 FrontEnd Web
+
+<img src="https://raw.githubusercontent.com/hugoMGSung/pknu_aspnet_2023/main/images/restapi03.gif" width="700">
