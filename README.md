@@ -100,8 +100,6 @@ ASP.NET Core MVC 게시판
     - RestAPI Server 체크
     - FrontEnd Server 작업
 
-<img src="https://github.com/limchaeyeon8/aspnet_2023/blob/main/SelfPortfolio/SelfPortfolio/sp_wip.gif" width="900">
-
 ## 12일차
 - ASP.NET RestAPI
     - RestAPI Server 수정
@@ -118,4 +116,7 @@ RestAPI사용 FrontEnd Web
 
 RestAPI사용 FrontEnd Web
 
-<img src="https://raw.githubusercontent.com/hugoMGSung/pknu_aspnet_2023/main/images/restapi03.gif" width="700">
+<img src="https://raw.githubusercontent.com/hugoMGSung/pknu_aspnet_2023/main/images/restapi03.png" width="700">
+
+개인 포트폴리오 사이트
+<img src="https://github.com/limchaeyeon8/aspnet_2023/blob/main/SelfPortfolio/SelfPortfolio/sp_wip.gif" width="900">
